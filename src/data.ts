@@ -27,3 +27,52 @@ export const statistics = [
 ];
 
 export const items =[ "Transactions", "Settlements", "Performance", "Terminal Health", "Bank Statement"]
+
+export const navItems = [
+  {
+    icon: "/dashboard-icon.svg",
+    link: "Dashboard",
+    path: "/",
+  },
+  {
+    icon: "/transaction.svg",
+    link: "Transactions",
+  },
+  {
+    icon: "/love-icon.svg",
+    link: "Terminal Health",
+  },
+  {
+    icon: "/performance-icon.svg",
+    link: "Settlement",
+  },
+  {
+    icon: "/Frame 38.svg",
+    link: "Bank Statement",
+    path: "",
+  },
+  {
+    icon: "/shopping-pos.svg",
+    link: "My Terminals",
+    Path: "",
+  },
+  {
+    icon: "/Setting.svg",
+    link: "Settings",
+  },
+  {
+    icon: "/message.svg",
+    link: "Message Center",
+    path: ""
+  },
+  {
+    icon: "/reconciliation.svg",
+    link: "Reconciliation",
+    path: "",
+  },
+  {
+    icon: "/Group 51.svg",
+    link: "Dispute Management",
+    path: "",
+  },
+];
