@@ -6,6 +6,7 @@ import StatisticCard from "../../Components/StatisticCard";
 import Table from "../../Components/Table";
 import TransactionCardType from "../../Components/TransactionCardType";
 import Transactions from "../../Components/Transactions";
+import { headerItems, tableItems } from "../../data";
 import {
   cardItems,
   chartItems,
@@ -71,7 +72,38 @@ const Home = () => {
               />
             </div>
           </div>
-          <Table />
+          {/* <div className="bg-white w-[60.75rem] px-8"> */}
+            <table className="mx-auto">
+              <thead>
+                <tr className="bg-[#EDF1FF] flex gap-4">
+                  {headerItems.map((headerItem, index) => (
+                    <th
+                      className="flex w-[8.95rem] items-center h-[3.37rem]"
+                      key={`headerItems- ${index}`}
+                    >
+                      {headerItem}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="flex flex-col items-start">
+                {
+                  tableItems.map((tableItem, index)=>(
+                    <Table 
+                    key= {`tableItems - ${index}`}
+                    time= {tableItem.time}
+                    amount= {tableItem.amount}
+                    type= {tableItem.type}
+                    terminal= {tableItem.terminal}
+                    account={tableItem.account}
+                    status= {tableItem.status}
+
+                    />
+                  ))
+                }
+              </tbody>
+            </table>
+          {/* </div> */}
         </section>
         <section className="mt-12">
           <p className="mb-[1.5rem] font-bold text-[1.5rem] text-[Ablack]">
