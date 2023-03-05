@@ -1,3 +1,3 @@
 .dashboard-children{
-    @apply grid grid-cols-[16.25rem_1fr]
+    @apply grid grid-cols-[13rem_1fr];
 }

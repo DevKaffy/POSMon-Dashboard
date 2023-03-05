@@ -1,26 +1,26 @@
 export const statistics = [
   {
-    icon: "/dollar-circle.png",
+    icon: "/vectors/dollar-circle.svg",
     title: "Total Transactions",
     details: "30,101",
   },
   {
-    icon: "/money-recive.png",
+    icon: "/vectors/money-recive.svg",
     title: "Approved Transactions",
     details: "20,101",
   },
   {
-    icon: "/money-send.png",
+    icon: "/vectors/money-send.svg",
     title: "Failed Transactions",
     details: "10,000",
   },
   {
-    icon: "/group.png",
+    icon: "/vectors/group.svg",
     title: "Transactions Terminal",
     details: "48",
   },
   {
-    icon: "/point-of-sale-terminal-pos-svgrepo-com 1.png",
+    icon: "/vectors/dollar-square.svg",
     title: "Total Terminals",
     details: "120",
   },
@@ -47,58 +47,224 @@ export const items = [
     link: "Bank Statement",
     path: "",
   },
-//   "Transactions",
-//   "Settlements",
-//   "Performance",
-//   "Terminal Health",
-//   "Bank Statement",
 ];
 
 export const navItems = [
   {
-    icon: "/dashboard-icon.svg",
+    icon: "/vectors/dashboard-icon.svg",
     link: "Dashboard",
     path: "/",
   },
   {
-    icon: "/transaction.svg",
+    icon: "/vectors/transaction.svg",
     link: "Transactions",
   },
   {
-    icon: "/love-icon.svg",
+    icon: "/vectors/love-icon.svg",
     link: "Terminal Health",
   },
   {
-    icon: "/performance-icon.svg",
+    icon: "/vectors/performance-icon.svg",
     link: "Settlement",
   },
   {
-    icon: "/Frame 38.svg",
+    icon: "/vectors/Frame 38.svg",
     link: "Bank Statement",
     path: "",
   },
   {
-    icon: "/shopping-pos.svg",
+    icon: "/vectors/shopping-pos.svg",
     link: "My Terminals",
     Path: "",
   },
   {
-    icon: "/Setting.svg",
+    icon: "/vectors/Setting.svg",
     link: "Settings",
   },
   {
-    icon: "/message.svg",
+    icon: "/vectors/message.svg",
     link: "Message Center",
     path: ""
   },
   {
-    icon: "/reconciliation.svg",
+    icon: "/vectors/reconciliation.svg",
     link: "Reconciliation",
     path: "",
   },
   {
-    icon: "/Group 51.svg",
+    icon: "/vectors/Group 51.svg",
     link: "Dispute Management",
     path: "",
+  },
+];
+
+export const headerItems = ["Time", "Amount", "Payment Type", "Terminal", "Account", "Status"]
+
+export const tableItems = [
+  {
+    time: "12: 30 pm",
+    amount: "20,100",
+    type: "Card",
+    terminal: "23012100",
+    account: "07613*******67",
+    status: "Approved",
+  },
+  {
+    time: "12: 30 pm",
+    amount: "20,100",
+    type: "Card",
+    terminal: "23012100",
+    account: "07613*******67",
+    status: "Approved",
+  },
+  {
+    time: "12: 30 pm",
+    amount: "20,100",
+    type: "Card",
+    terminal: "23012100",
+    account: "07613*******67",
+    status: "Approved",
+  },
+  {
+    time: "12: 30 pm",
+    amount: "20,100",
+    type: "Card",
+    terminal: "23012100",
+    account: "07613*******67",
+    status: "Approved",
+  },
+  {
+    time: "12: 30 pm",
+    amount: "20,100",
+    type: "Card",
+    terminal: "23012100",
+    account: "07613*******67",
+    status: "Approved",
+  },
+  {
+    time: "12: 30 pm",
+    amount: "20,100",
+    type: "Card",
+    terminal: "23012100",
+    account: "07613*******67",
+    status: "Approved",
+  },
+  {
+    time: "12: 30 pm",
+    amount: "20,100",
+    type: "Card",
+    terminal: "23012100",
+    account: "07613*******67",
+    status: "Approved",
+  },
+  {
+    time: "12: 30 pm",
+    amount: "20,100",
+    type: "Card",
+    terminal: "23012100",
+    account: "07613*******67",
+    status: "Approved",
+  },
+  {
+    time: "12: 30 pm",
+    amount: "20,100",
+    type: "Card",
+    terminal: "23012100",
+    account: "07613*******67",
+    status: "Approved",
+  },
+];
+
+export const cardItems = [
+  {
+    cardtype: "Visa",
+    img: "/visa.png",
+    approvedpercent: "(30%)",
+    approvedvalue: "512",
+    failedpercent: "(70%)",
+    failedvalue: "3,434",
+  },
+  {
+    cardtype: "Master Card",
+    img: "/master-card.png",
+    approvedpercent: "(75%)",
+    approvedvalue: "1000",
+    failedpercent: "(25%)",
+    failedvalue: "311",
+  },
+  {
+    cardtype: "Verve",
+    img: "/verve.png",
+    approvedpercent: "(20%)",
+    approvedvalue: "121",
+    failedpercent: "(80%)",
+    failedvalue: "4,343",
+  },
+  {
+    cardtype: "Card Type",
+    img: "/card-type.png",
+    approvedpercent: "(percent)",
+    approvedvalue: "Value",
+    failedpercent: "(percent)",
+    failedvalue: "Value",
+  },
+  {
+    cardtype: "Card Type",
+    img: "/card-type.png",
+    approvedpercent: "(percent)",
+    approvedvalue: "Value",
+    failedpercent: "(percent)",
+    failedvalue: "Value",
+  },
+  {
+    cardtype: "Card Type",
+    img: "/card-type.png",
+    approvedpercent: "(percent)",
+    approvedvalue: "Value",
+    failedpercent: "(percent)",
+    failedvalue: "Value",
+  },
+];
+
+export const transactionDetails = [
+  {
+    details: "51 (Not sufficient funds)",
+    figure: "1,110",
+  },
+  {
+    details: "51 (Not sufficient funds)",
+    figure: "1,110",
+  },
+  {
+    details: "51 (Not sufficient funds)",
+    figure: "1,110",
+  },
+  {
+    details: "51 (Not sufficient funds)",
+    figure: "1,110",
+  },
+  {
+    details: "51 (Not sufficient funds)",
+    figure: "1,110",
+  },
+  {
+    details: "51 (Not sufficient funds)",
+    figure: "1,110",
+  },
+  {
+    details: "51 (Not sufficient funds)",
+    figure: "1,110",
+  },
+  {
+    details: "51 (Not sufficient funds)",
+    figure: "1,110",
+  },
+  {
+    details: "51 (Not sufficient funds)",
+    figure: "1,110",
+  },
+  {
+    details: "51 (Not sufficient funds)",
+    figure: "1,110",
   },
 ];

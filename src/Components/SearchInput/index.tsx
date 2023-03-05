@@ -6,7 +6,7 @@ const SearchInput = () => {
       <div className="flex items-center gap-[0.87rem] w-[34rem] border border-Bblack py-2 px-2 rounded-[5px]">
         <img
           className="w-[0.93rem] h-[0.93rem]"
-          src="/search-normal.svg"
+          src="/vectors/search-normal.svg"
           alt=""
         />
         <input
