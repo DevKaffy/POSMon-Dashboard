@@ -72,12 +72,30 @@ export const navItems = [
   {
     icon: "/vectors/love-icon.svg",
     link: "Terminal Health",
-    submenu: [],
+    submenu: [
+      {
+        title: "Insights",
+        path: "/insights",
+      },
+      {
+        title: "Report",
+        path: "/report",
+      },
+    ],
   },
   {
     icon: "/vectors/performance-icon.svg",
     link: "Settlement",
-    submenu: [],
+    submenu: [
+      {
+        title: "Insights",
+        path: "/insights",
+      },
+      {
+        title: "Report",
+        path: "/report",
+      },
+    ],
   },
   {
     icon: "/vectors/Frame 38.svg",
@@ -92,7 +110,20 @@ export const navItems = [
   {
     icon: "/vectors/Setting.svg",
     link: "Settings",
-    submenu: [],
+    submenu: [
+      {
+        title: "User Management",
+        path: "/user",
+      },
+      {
+        title: "Location Management",
+        path: "/location",
+      },
+      {
+        title: "Role Management",
+        path: "/role",
+      },
+    ],
   },
   {
     icon: "/vectors/message.svg",
