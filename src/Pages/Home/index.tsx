@@ -5,7 +5,13 @@ import DashboardLayout from "../../Components/Layout/DashboardLayout";
 import StatisticCard from "../../Components/StatisticCard";
 import Table from "../../Components/Table";
 import Transactions from "../../Components/Transactions";
-import { cardItems, items, statistics, transactionDetails } from "../../data";
+import {
+  cardItems,
+  chartItems,
+  items,
+  statistics,
+  transactionDetails,
+} from "../../data";
 
 import "./Home.css";
 
@@ -67,7 +73,9 @@ const Home = () => {
           <Table />
         </section>
         <section className="mt-12">
-          <p className="mb-[1.5rem] font-bold text-[1.5rem] text-[Ablack]">Failed Transactions</p>
+          <p className="mb-[1.5rem] font-bold text-[1.5rem] text-[Ablack]">
+            Failed Transactions
+          </p>
           <div className="grid grid-cols-2 gap-x-[1.5rem]">
             <div>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -75,11 +83,29 @@ const Home = () => {
               nesciunt magni doloribus reprehenderit corrupti quae, asperiores
               eligendi debitis ratione possimus dolores voluptatum.
             </div>
-            <div className="pt-8 px-12 bg-white">
+            <div className="pt-8 pb-16 px-12 bg-white rounded-[5px]">
               <h2 className="font-bold text-[2rem] mb-[0.31rem] text-[Ablack]">
                 10,000
               </h2>
-              <p className="font-medium text-[Ablack]">Here’s why your transactions failed!</p>
+              <p className="font-medium text-[Ablack]">
+                Here’s why your transactions failed!
+              </p>
+              <div className="flex items-center mt-[2.5rem] mb-[3rem] gap-x-4 text-[0.87rem]">
+                {chartItems.map((chartItem, index) => (
+                  <div key={`chartItems -${index}`}>
+                    <NavLink
+                      to={chartItem.path || ""}
+                      className={
+                        activePath == chartItem.path
+                          ? "bg-[#4C6FFF] text-white py-[0.5rem] px-[0.5rem] rounded-[5px]"
+                          : "bg-[#EBEEF2] py-[0.5rem] px-[0.5rem] rounded-[5px]"
+                      }
+                    >
+                      {chartItem.name}
+                    </NavLink>
+                  </div>
+                ))}
+              </div>
               <div>
                 {transactionDetails.map((transactionDetail, index) => (
                   <Transactions

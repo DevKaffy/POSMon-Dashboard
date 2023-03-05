@@ -268,3 +268,26 @@ export const transactionDetails = [
     figure: "1,110",
   },
 ];
+
+export const chartItems = [
+  {
+    name: "Cardholder",
+    path: "/",
+  },
+  {
+    name: "Acquirer",
+    path: "",
+  },
+  {
+    name: "Issuer",
+    path: "",
+  },
+  {
+    name: "Switch",
+    path: "",
+  },
+  {
+    name: "Undefined",
+    path: "",
+  },
+];
