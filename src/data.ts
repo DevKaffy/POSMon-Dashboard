@@ -335,3 +335,26 @@ export const chartItems = [
     path: "",
   },
 ];
+
+export const ellipses = [
+  {
+    img: "/vectors/Ellipse red.svg",
+    title: "Acquirer related",
+  },
+  {
+    img: "/vectors/Ellipse blue.svg",
+    title: "Cardholder Related",
+  },
+  {
+    img: "/vectors/Ellipse purple.svg",
+    title: "Issuer Related",
+  },
+  {
+    img: "/vectors/Ellipse orange.svg",
+    title: "Switch Related",
+  },
+  {
+    img: "/vectors/Ellipse green.svg",
+    title: "Undefined",
+  },
+];

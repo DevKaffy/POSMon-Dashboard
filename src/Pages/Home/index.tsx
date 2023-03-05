@@ -1,12 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Card from "../../Components/Card";
+import Ellipses from "../../Components/Ellipses/Ellipses";
 import DashboardLayout from "../../Components/Layout/DashboardLayout";
 import StatisticCard from "../../Components/StatisticCard";
 import Table from "../../Components/Table";
 import TransactionCardType from "../../Components/TransactionCardType";
 import Transactions from "../../Components/Transactions";
-import { headerItems, tableItems } from "../../data";
+import { headerItems, tableItems, ellipses } from "../../data";
 import {
   cardItems,
   chartItems,
@@ -111,7 +112,18 @@ const Home = () => {
           </p>
           <div className="grid grid-cols-2 gap-x-[1.5rem]">
             <div className="bg-white px-8 py-8 rounded-[5px]">
-              <p className="font-semibold text-[1.25rem]">Failures by Class</p>
+              <p className="font-semibold text-[1.25rem] pb-[1.37rem]">Failures by Class</p>
+              <div className="flex flex-wrap gap-x-[1.5rem] gap-y-[0.93rem]">
+                {
+                  ellipses.map((ellipse, index)=>(
+                    <Ellipses
+                    key= {`ellipses - ${index}`}
+                    img= {ellipse.img}
+                    title= {ellipse.title}
+                    />
+                  ))
+                }
+              </div>
             </div>
             <div className="pt-8 pb-16 px-12 bg-white rounded-[5px]">
               <h2 className="font-bold text-[2rem] mb-[0.31rem] text-[Ablack]">
