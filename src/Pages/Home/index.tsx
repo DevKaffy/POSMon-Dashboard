@@ -110,11 +110,8 @@ const Home = () => {
             Failed Transactions
           </p>
           <div className="grid grid-cols-2 gap-x-[1.5rem]">
-            <div className="bg-white">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Inventore ducimus nihil voluptate placeat modi eum ea, facere,
-              nesciunt magni doloribus reprehenderit corrupti quae, asperiores
-              eligendi debitis ratione possimus dolores voluptatum.
+            <div className="bg-white px-8 py-8 rounded-[5px]">
+              <p className="font-semibold text-[1.25rem]">Failures by Class</p>
             </div>
             <div className="pt-8 pb-16 px-12 bg-white rounded-[5px]">
               <h2 className="font-bold text-[2rem] mb-[0.31rem] text-[Ablack]">
