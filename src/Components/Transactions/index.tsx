@@ -5,14 +5,14 @@ const Transactions = ({details, figure}:{
   figure: string;
 }) => {
   return (
-    <div>
-    <ul className='flex disc'>
-      <li>{details}</li>
-      <li>{figure}</li>
-    </ul>
+    <div className="flex m-4 list-disc items-center justify-between">
+      <div className="flex gap-x-[0.5rem] items-center">
+        <span className="w-[0.5rem] h-[0.5rem] rounded-full bg-[#4C6FFF]"></span>
+        <span>{details}</span>
+      </div>
+      <span>{figure}</span>
     </div>
-
-  )
+  );
 }
 
 export default Transactions

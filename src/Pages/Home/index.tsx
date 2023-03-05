@@ -1,16 +1,16 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom';
-import Card from '../../Components/Card';
-import DashboardLayout from '../../Components/Layout/DashboardLayout'
-import StatisticCard from '../../Components/StatisticCard';
-import Table from '../../Components/Table';
-import Transactions from '../../Components/Transactions';
-import { cardItems, items, statistics, transactionDetails} from '../../data';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import Card from "../../Components/Card";
+import DashboardLayout from "../../Components/Layout/DashboardLayout";
+import StatisticCard from "../../Components/StatisticCard";
+import Table from "../../Components/Table";
+import Transactions from "../../Components/Transactions";
+import { cardItems, items, statistics, transactionDetails } from "../../data";
 
-import './Home.css'
+import "./Home.css";
 
 const Home = () => {
-    const activePath = window.location.pathname
+  const activePath = window.location.pathname;
   return (
     <DashboardLayout>
       <main className="wrapper">
@@ -66,20 +66,30 @@ const Home = () => {
           </div>
           <Table />
         </section>
-        <section className="grid grid-cols-2">
-          <h2>10,000</h2>
-          <p>Here’s why your transactions failed!</p>
-          <div>
-            {
-            transactionDetails.map((transactionDetail, index)=>(
-                <Transactions
-                key= {`transactionsDetails -${index}`}
-                details= {transactionDetail.details}
-                figure= {transactionDetail.figure}
-                />
-
-            ))
-            }
+        <section className="mt-12">
+          <p className="mb-[1.5rem] font-bold text-[1.5rem] text-[Ablack]">Failed Transactions</p>
+          <div className="grid grid-cols-2 gap-x-[1.5rem]">
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Inventore ducimus nihil voluptate placeat modi eum ea, facere,
+              nesciunt magni doloribus reprehenderit corrupti quae, asperiores
+              eligendi debitis ratione possimus dolores voluptatum.
+            </div>
+            <div className="pt-8 px-12 bg-white">
+              <h2 className="font-bold text-[2rem] mb-[0.31rem] text-[Ablack]">
+                10,000
+              </h2>
+              <p className="font-medium text-[Ablack]">Here’s why your transactions failed!</p>
+              <div>
+                {transactionDetails.map((transactionDetail, index) => (
+                  <Transactions
+                    key={`transactionsDetails -${index}`}
+                    details={transactionDetail.details}
+                    figure={transactionDetail.figure}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </section>
         <section className="mt-[3rem]">
@@ -103,6 +113,6 @@ const Home = () => {
       </main>
     </DashboardLayout>
   );
-}
+};
 
-export default Home
+export default Home;

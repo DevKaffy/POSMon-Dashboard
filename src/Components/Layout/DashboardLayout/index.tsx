@@ -5,7 +5,7 @@ import './DashboardLayout.css'
 
 const DashboardLayout = ({children}: {children: ReactElement}) => {
   return (
-    <div className='pl-[3.25rem]'>
+    <div>
       <TopNav />
       <section className="dashboard-children">
         <SideNav />
