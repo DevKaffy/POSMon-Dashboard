@@ -1,0 +1,11 @@
+.sidebar-item.open img.arrow{
+  transform: rotate(180deg);
+}
+.sidebar-content{
+  padding-top: .25em;
+  overflow: hidden;
+  height: 0;
+}
+.sidebar-item.open  .sidebar-content{
+  height: auto;
+}

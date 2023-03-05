@@ -4,6 +4,7 @@ import Card from "../../Components/Card";
 import DashboardLayout from "../../Components/Layout/DashboardLayout";
 import StatisticCard from "../../Components/StatisticCard";
 import Table from "../../Components/Table";
+import TransactionCardType from "../../Components/TransactionCardType";
 import Transactions from "../../Components/Transactions";
 import {
   cardItems,
@@ -77,7 +78,7 @@ const Home = () => {
             Failed Transactions
           </p>
           <div className="grid grid-cols-2 gap-x-[1.5rem]">
-            <div>
+            <div className="bg-white">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Inventore ducimus nihil voluptate placeat modi eum ea, facere,
               nesciunt magni doloribus reprehenderit corrupti quae, asperiores
@@ -90,7 +91,7 @@ const Home = () => {
               <p className="font-medium text-[Ablack]">
                 Here’s why your transactions failed!
               </p>
-              <div className="flex items-center mt-[2.5rem] mb-[3rem] gap-x-4 text-[0.87rem]">
+              <div className="flex items-center mt-[2.5rem] mb-[3rem] text-[#3D4C5E] gap-x-4 text-[0.87rem]">
                 {chartItems.map((chartItem, index) => (
                   <div key={`chartItems -${index}`}>
                     <NavLink
@@ -106,7 +107,7 @@ const Home = () => {
                   </div>
                 ))}
               </div>
-              <div>
+              <div className="text-[Ablack]">
                 {transactionDetails.map((transactionDetail, index) => (
                   <Transactions
                     key={`transactionsDetails -${index}`}
@@ -118,24 +119,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="mt-[3rem]">
-          <h3 className="text-Ablack font-bold text-[1.5rem] mb-[1.5rem]">
-            Transactions Per Card Type
-          </h3>
-          <div className="grid grid-cols-3 gap-[1.75rem]">
-            {cardItems.map((cardItem, index) => (
-              <Card
-                key={`cardItems -${index}`}
-                cardtype={cardItem.cardtype}
-                img={cardItem.img}
-                approvedpercent={cardItem.approvedpercent}
-                approvedvalue={cardItem.approvedvalue}
-                failedpercent={cardItem.failedpercent}
-                failedvalue={cardItem.failedvalue}
-              />
-            ))}
-          </div>
-        </section>
+        <TransactionCardType />
       </main>
     </DashboardLayout>
   );
