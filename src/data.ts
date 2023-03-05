@@ -26,7 +26,33 @@ export const statistics = [
   },
 ];
 
-export const items =[ "Transactions", "Settlements", "Performance", "Terminal Health", "Bank Statement"]
+export const items = [
+  {
+    link: "Transactions",
+    path: "/",
+  },
+  {
+    link: "Settlements",
+    path: "",
+  },
+  {
+    link: "Performance",
+    path: "",
+  },
+  {
+    link: "Terminal Health",
+    path: "",
+  },
+  {
+    link: "Bank Statement",
+    path: "",
+  },
+//   "Transactions",
+//   "Settlements",
+//   "Performance",
+//   "Terminal Health",
+//   "Bank Statement",
+];
 
 export const navItems = [
   {
