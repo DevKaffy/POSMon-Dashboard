@@ -111,7 +111,7 @@ const Home = () => {
             Failed Transactions
           </p>
           <div className="grid grid-cols-2 gap-x-[1.5rem]">
-            <div className="bg-white px-8 py-8 rounded-[5px]">
+            <div className="bg-white px-8 py-8 rounded-[5px] text-[Ablack]">
               <p className="font-semibold text-[1.25rem] pb-[1.37rem]">Failures by Class</p>
               <div className="flex flex-wrap gap-x-[1.5rem] gap-y-[0.93rem]">
                 {
