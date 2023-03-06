@@ -1,0 +1,9 @@
+.search-wrapper{
+    @apply flex items-center gap-[0.87rem] w-[34rem] border border-Bblack py-2 px-2 rounded-[5px];
+}
+.search-wrapper img{
+    @apply w-[0.93rem] h-[0.93rem];
+}
+.search-wrapper input {
+    @apply flex-grow text-sm font-normal focus:outline-none text-[rgba(29, 36, 45, 0.5)];
+}

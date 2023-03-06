@@ -1,3 +1,12 @@
+.dashboard-container{
+    @apply h-screen w-screen overflow-hidden flex flex-col;
+}
 .dashboard-children{
-    @apply grid grid-cols-[16.25rem_1fr];
+    @apply grid grid-cols-[16.25rem_1fr] overflow-hidden flex-grow;
+}
+.sidenav-wrapper{
+    @apply overflow-y-hidden h-full;
+}
+.children-wrapper{
+    @apply px-4 bg-[#F7FAFC] overflow-y-auto;
 }

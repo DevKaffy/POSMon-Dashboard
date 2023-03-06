@@ -5,13 +5,13 @@ import './DashboardLayout.css'
 
 const DashboardLayout = ({children}: {children: ReactElement}) => {
   return (
-    <div className="h-screen w-screen overflow-hidden flex flex-col">
+    <div className="dashboard-container">
       <TopNav />
-      <section className="dashboard-children overflow-hidden flex-grow">
-        <div className="overflow-y-hidden h-full">
+      <section className="dashboard-children">
+        <div className="sidenav-wrapper">
           <SideNav />
         </div>
-        <div className="px-4 bg-[#F7FAFC] overflow-y-auto">{children}</div>
+        <div className="children-wrapper">{children}</div>
       </section>
     </div>
   );

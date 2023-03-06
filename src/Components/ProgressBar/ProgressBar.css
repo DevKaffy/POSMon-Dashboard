@@ -1,0 +1,6 @@
+.progress-wrapper{
+    @apply flex items-center gap-4;
+}
+.props-wrapper{
+    @apply w-[11.25rem] h-2 bg-[#F7F7F7] rounded-[10px];
+}

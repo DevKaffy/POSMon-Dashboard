@@ -1,3 +1,6 @@
+.aside-wrapper{
+    @apply h-full overflow-y-auto flex flex-col gap-[1.37rem] pl-[3.25rem] pt-[2.5rem] bg-white;
+}
 .sidebar-item.open img.arrow{
   transform: rotate(180deg);
 }
