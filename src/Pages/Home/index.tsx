@@ -3,7 +3,6 @@ import BarChart from "../../Components/BarChart";
 
 import FailedTransaction from "../../Components/FailedTransaction";
 import DashboardLayout from "../../Components/Layout/DashboardLayout";
-import StatisticCard from "../../Components/StatisticCard";
 import Table from "../../Components/Table";
 import TransactionCardType from "../../Components/TransactionCardType";
 import TransactionStatistic from "../../Components/TransactionStatistic";
@@ -17,7 +16,7 @@ const Home = () => {
   return (
     <DashboardLayout>
       <main className="wrapper">
-        <header className="text-Ablack">
+        <header>
           <div className="flex justify-end items-center gap-4">
             <p>12th October, 2022</p>
             <img className="cursor-pointer" src="/vectors/Group v.png" alt="" />
