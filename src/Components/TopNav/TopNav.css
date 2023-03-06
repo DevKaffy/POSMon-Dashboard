@@ -1,3 +1,9 @@
 .top-nav{
     @apply h-24 py-[1.5rem] pr-[3rem] flex items-center bg-white pl-[3.25rem];
 }
+.img-wrapper{
+    @apply flex items-center gap-[1.75rem] mr-[4rem];
+}
+.img-wrappertwo{
+    @apply flex items-center gap-[2.34rem];
+}

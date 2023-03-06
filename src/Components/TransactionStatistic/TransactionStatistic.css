@@ -1,0 +1,6 @@
+.transaction-stat{
+    @apply flex items-center  mb-12 gap-8 bg-white font-semibold w-[44rem] rounded-[5px] cursor-pointer;
+}
+.stat{
+    @apply flex items-center gap-[1.5rem] flex-wrap mb-12;
+}

@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import { items, statistics } from '../../data';
 import StatisticCard from '../StatisticCard';
+import "./TransactionStatistic.css"
 
 const TransactionStatistic = () => {
         const [activeTab, setactiveTab] = useState(0);
 
   return (
     <div>
-      <div className="flex items-center  mb-12 gap-8 bg-white font-semibold w-[44rem] rounded-[5px] cursor-pointer">
+      <div className="transaction-stat">
         {items.map((item, index) => (
           <div key={`items -${index}`} >
             <div onClick={()=>setactiveTab(index)}
@@ -22,7 +23,7 @@ const TransactionStatistic = () => {
           </div>
         ))}
       </div>
-      <section className="flex items-center gap-[1.5rem] flex-wrap mb-12">
+      <section className="stat">
         {statistics.map((statistic, index) => (
           <StatisticCard
             key={`statistics - ${index}`}

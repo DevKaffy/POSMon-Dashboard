@@ -31,7 +31,7 @@ const SideBarItem = ({navItem}:{
           </div>
           <div className="sidebar-content">
             {navItem.submenu.map((menu: any, index: number) => (
-              <NavLink className="sidebar-item flex flex-col gap-2 pl-5" to={menu.path || "#"}>
+              <NavLink className="sidebar-item flex flex-col gap-y-2 pl-5" to={menu.path || "#"}>
                 <span
                   className={
                     activePath == menu.path

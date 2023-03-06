@@ -5,7 +5,11 @@ const SearchInput = () => {
     <div>
       <div className="search-wrapper">
         <img src="/vectors/search-normal.svg" alt="" />
-        <input type="text" placeholder="Search" />
+        <input
+          className="flex-grow text-sm font-normal focus:outline-none text-[rgba(29, 36, 45, 0.5)]"
+          type="text"
+          placeholder="Search"
+        />
       </div>
     </div>
   );
