@@ -26,28 +26,8 @@ export const statistics = [
   },
 ];
 
-export const items = [
-  {
-    link: "Transactions",
-    path: "/",
-  },
-  {
-    link: "Settlements",
-    path: "",
-  },
-  {
-    link: "Performance",
-    path: "",
-  },
-  {
-    link: "Terminal Health",
-    path: "",
-  },
-  {
-    link: "Bank Statement",
-    path: "",
-  },
-];
+export const items = ["Transactions", "Settlements", "Performance", "Terminal Health","Bank Statement"]
+
 
 export const navItems = [
   {
@@ -142,8 +122,34 @@ export const navItems = [
   },
 ];
 
-export const headerItems = ["Time", "Amount", "Payment Type", "Terminal", "Account", "Status"]
+// export const headerItems = ["Time", "Amount", "Payment Type", "Terminal", "Account", "Status"]
 
+export const headerItems = [
+  {
+    label: "Time",
+    key: "time",
+  },
+  {
+    label: "Amount",
+    key: "amount",
+  },
+  {
+    label: "Payment Type",
+    key: "type",
+  },
+  {
+    label: "Terminal",
+    key: "terminal",
+  },
+  {
+    label: "Account",
+    key: "account",
+  },
+  {
+    label: "Status",
+    key: "status",
+  },
+];
 export const tableItems = [
   {
     time: "12:30 pm",
@@ -175,7 +181,7 @@ export const tableItems = [
     type: "Card",
     terminal: "23012100",
     account: "07613*******67",
-    status: "Approved",
+    status: "Failed",
   },
   {
     time: "12:30 pm",
@@ -183,7 +189,7 @@ export const tableItems = [
     type: "Card",
     terminal: "23012100",
     account: "07613*******67",
-    status: "Approved",
+    status: "Failed",
   },
   {
     time: "12: 30 pm",
@@ -191,7 +197,7 @@ export const tableItems = [
     type: "Card",
     terminal: "23012100",
     account: "07613*******67",
-    status: "Approved",
+    status: "Failed",
   },
   {
     time: "12:30 pm",
@@ -199,7 +205,7 @@ export const tableItems = [
     type: "Card",
     terminal: "23012100",
     account: "07613*******67",
-    status: "Approved",
+    status: "Failed",
   },
   {
     time: "12:30 pm",
@@ -207,7 +213,7 @@ export const tableItems = [
     type: "Card",
     terminal: "23012100",
     account: "07613*******67",
-    status: "Approved",
+    status: "Failed",
   },
   {
     time: "12:30 pm",
@@ -215,7 +221,7 @@ export const tableItems = [
     type: "Card",
     terminal: "23012100",
     account: "07613*******67",
-    status: "Approved",
+    status: "Failed",
   },
 ];
 
@@ -313,28 +319,7 @@ export const transactionDetails = [
   },
 ];
 
-export const chartItems = [
-  {
-    name: "Cardholder",
-    path: "/",
-  },
-  {
-    name: "Acquirer",
-    path: "",
-  },
-  {
-    name: "Issuer",
-    path: "",
-  },
-  {
-    name: "Switch",
-    path: "",
-  },
-  {
-    name: "Undefined",
-    path: "",
-  },
-];
+export const chartItems = ["Cardholder", "Aquirer", "Issuer", "Switch", "Undefined"]
 
 export const ellipses = [
   {
@@ -356,5 +341,28 @@ export const ellipses = [
   {
     img: "/vectors/Ellipse green.svg",
     title: "Undefined",
+  },
+];
+
+export const progressStats = [
+  {
+    color: "#4C6FFF",
+    width: "70%",
+  },
+  {
+    color: "#DC1D1D",
+    width: "50%",
+  },
+  {
+    color: "#66CB9F",
+    width: "30%",
+  },
+  {
+    color: "#B81FDE",
+    width: "20%",
+  },
+  {
+    color: "#FF6934",
+    width: "10%",
   },
 ];

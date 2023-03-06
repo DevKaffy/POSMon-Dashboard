@@ -1,0 +1,37 @@
+table {
+  width: 1050px;
+  height: 200px;
+  margin: auto;
+background-color: #F7FAFC;
+  @media (max-width: 480px) {
+    width: 320px;
+  }
+}
+
+th {
+  text-align: start;
+  background-color: #EDF1FF;
+  padding: 0.5rem;
+
+  @media (max-width: 480px) {
+    font-size: 10px;
+    padding: 0.2rem;
+  }
+}
+
+td {
+  text-align: start;
+  padding: 0.5rem;
+color: "#3D4C5E";
+font-size: 14px;
+  @media (max-width: 480px) {
+    font-size: 8px;
+    padding: 0.2rem;
+  }
+}
+
+tr {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}

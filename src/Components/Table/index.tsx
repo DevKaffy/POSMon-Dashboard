@@ -1,23 +1,28 @@
 import React from 'react'
-
-const Table = ({time, amount, type, terminal, account, status,}: {
-  time: string;
-  amount: string;
-  type: string;
-  terminal: string;
-  account: string;
-  status: string;
-}) => {
+import "./Table.css"
+const Table = ({ headings, tableData }: { headings: any; tableData:any}) => {
   return (
-      <tr className="flex items-center gap-x-[6rem] gap-y-[6rem] text-center">
-        <td>{time}</td>
-        <td>{amount}</td>
-        <td>{type}</td>
-        <td>{terminal}</td>
-        <td>{account}</td>
-        <td>{status}</td>
-      </tr>
+    <table className={`table`}>
+      <thead>
+        <tr>
+          {headings.map((heading:any, headingIndex:number) => (
+            <th key={headingIndex}>{heading.label}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {tableData.map((row: any, rowIndex: number) => (
+          <tr key={`${rowIndex}_table-row-${rowIndex}`}>
+            {headings.map((col:any, colIndex:any) => (
+              <td key={`col-${colIndex}`}>
+                {row[col.key]}
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
-}
+};
 
 export default Table

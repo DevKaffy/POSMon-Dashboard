@@ -1,20 +1,14 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import Card from "../../Components/Card";
-import Ellipses from "../../Components/Ellipses/Ellipses";
+import BarChart from "../../Components/BarChart";
+
+import FailedTransaction from "../../Components/FailedTransaction";
 import DashboardLayout from "../../Components/Layout/DashboardLayout";
 import StatisticCard from "../../Components/StatisticCard";
 import Table from "../../Components/Table";
 import TransactionCardType from "../../Components/TransactionCardType";
-import Transactions from "../../Components/Transactions";
-import { headerItems, tableItems, ellipses } from "../../data";
-import {
-  cardItems,
-  chartItems,
-  items,
-  statistics,
-  transactionDetails,
-} from "../../data";
+import TransactionStatistic from "../../Components/TransactionStatistic";
+import { headerItems, tableItems } from "../../data";
+import { items, statistics } from "../../data";
 
 import "./Home.css";
 
@@ -24,39 +18,18 @@ const Home = () => {
     <DashboardLayout>
       <main className="wrapper">
         <header className="text-Ablack">
+          <div className="flex justify-end items-center gap-4">
+            <p>12th October, 2022</p>
+            <img className="cursor-pointer" src="/vectors/Group v.png" alt="" />
+          </div>
           <div className="mb-[2.5rem]">
             <h3 className="text-[2.28rem]  font-bold mb-[0.25rem]">
               Welcome back,
             </h3>
             <p>Here’s what is happening with your Terminals today,</p>
           </div>
-          <div className="flex bg-white mb-12 gap-8 py-[0.75rem] font-semibold w-[44rem] rounded-[5px]">
-            {items.map((item, index) => (
-              <div key={`items -${index}`}>
-                <NavLink
-                  to={item.path || " "}
-                  className={
-                    activePath == item.path
-                      ? "bg-[#4C6FFF] text-white py-[0.75rem] px-4 rounded-[5px]"
-                      : "bg-white"
-                  }
-                >
-                  {item.link}
-                </NavLink>
-              </div>
-            ))}
-          </div>
         </header>
-        <section className="flex items-center gap-[1.5rem] flex-wrap mb-12">
-          {statistics.map((statistic, index) => (
-            <StatisticCard
-              key={`statistics - ${index}`}
-              icon={statistic.icon}
-              title={statistic.title}
-              details={statistic.details}
-            />
-          ))}
-        </section>
+        <TransactionStatistic />
         <section>
           <div className="flex items-center justify-between mb-[1.5rem] text-[1.5rem]">
             <h3 className="text-Ablack font-bold">Live Monitoring</h3>
@@ -73,93 +46,42 @@ const Home = () => {
               />
             </div>
           </div>
-          {/* <div className="bg-white w-[60.75rem] px-8"> */}
-            <table className="mx-auto">
-              <thead>
-                <tr className="bg-[#EDF1FF] flex gap-4">
-                  {headerItems.map((headerItem, index) => (
-                    <th
-                      className="flex w-[8.95rem] items-center h-[3.37rem]"
-                      key={`headerItems- ${index}`}
-                    >
-                      {headerItem}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody className="flex flex-col items-start">
-                {
-                  tableItems.map((tableItem, index)=>(
-                    <Table 
-                    key= {`tableItems - ${index}`}
-                    time= {tableItem.time}
-                    amount= {tableItem.amount}
-                    type= {tableItem.type}
-                    terminal= {tableItem.terminal}
-                    account={tableItem.account}
-                    status= {tableItem.status}
+          <div className="bg-white rounded-[10px]">
+            <Table
+              tableData={tableItems.map((item) => ({
+                time: item.time,
 
-                    />
-                  ))
-                }
-              </tbody>
-            </table>
-          {/* </div> */}
-        </section>
-        <section className="mt-12">
-          <p className="mb-[1.5rem] font-bold text-[1.5rem] text-[Ablack]">
-            Failed Transactions
-          </p>
-          <div className="grid grid-cols-2 gap-x-[1.5rem]">
-            <div className="bg-white px-8 py-8 rounded-[5px] text-[Ablack]">
-              <p className="font-semibold text-[1.25rem] pb-[1.37rem]">Failures by Class</p>
-              <div className="flex flex-wrap gap-x-[1.5rem] gap-y-[0.93rem]">
-                {
-                  ellipses.map((ellipse, index)=>(
-                    <Ellipses
-                    key= {`ellipses - ${index}`}
-                    img= {ellipse.img}
-                    title= {ellipse.title}
-                    />
-                  ))
-                }
-              </div>
-            </div>
-            <div className="pt-8 pb-16 px-12 bg-white rounded-[5px]">
-              <h2 className="font-bold text-[2rem] mb-[0.31rem] text-[Ablack]">
-                10,000
-              </h2>
-              <p className="font-medium text-[Ablack]">
-                Here’s why your transactions failed!
-              </p>
-              <div className="flex items-center mt-[2.5rem] mb-[3rem] text-[#3D4C5E] gap-x-4 text-[0.87rem]">
-                {chartItems.map((chartItem, index) => (
-                  <div key={`chartItems -${index}`}>
-                    <NavLink
-                      to={chartItem.path || ""}
-                      className={
-                        activePath == chartItem.path
-                          ? "bg-[#4C6FFF] text-white py-[0.5rem] px-[0.5rem] rounded-[5px]"
-                          : "bg-[#EBEEF2] py-[0.5rem] px-[0.5rem] rounded-[5px]"
+                amount: item.amount,
+                type: item.type,
+                terminal: item.terminal,
+                account: item.account,
+                status: (
+                  <p
+                    className={`flex justify-center rounded-[5px] w-[73px] px-1 py-[3.5px]
+                      ${
+                        item.status == "Approved"
+                          ? "text-[#3DD154] bg-[#C3F1CA]"
+                          : "text-[#DC1D1D] bg-[#FCE8E8]"
                       }
-                    >
-                      {chartItem.name}
-                    </NavLink>
-                  </div>
-                ))}
-              </div>
-              <div className="text-[Ablack]">
-                {transactionDetails.map((transactionDetail, index) => (
-                  <Transactions
-                    key={`transactionsDetails -${index}`}
-                    details={transactionDetail.details}
-                    figure={transactionDetail.figure}
-                  />
-                ))}
-              </div>
-            </div>
+                    `}
+                  >
+                    {item.status}
+                  </p>
+                ),
+              }))}
+              headings={headerItems}
+            />
           </div>
         </section>
+        <section>
+          <p className="mb-[1rem] font-bold text-[1.5rem] text-[Ablack] mt-12">
+            Hourly Distribution
+          </p>
+          <div className="bg-white">
+            <BarChart />
+          </div>
+        </section>
+        <FailedTransaction />
         <TransactionCardType />
       </main>
     </DashboardLayout>

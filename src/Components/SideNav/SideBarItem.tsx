@@ -24,14 +24,14 @@ const SideBarItem = ({navItem}:{
               {navItem.link}
             </span>
             <img
-              className="arrow"
+              className="arrow cursor-pointer"
               src="/vectors/arrow-downv.svg"
               onClick={() => setOpen(!open)}
             />
           </div>
           <div className="sidebar-content">
             {navItem.submenu.map((menu: any, index: number) => (
-              <NavLink className="sidebar-item flex flex-direction-column pl-5" to={menu.path || "#"}>
+              <NavLink className="sidebar-item flex flex-col gap-2 pl-5" to={menu.path || "#"}>
                 <span
                   className={
                     activePath == menu.path
