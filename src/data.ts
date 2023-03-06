@@ -122,7 +122,6 @@ export const navItems = [
   },
 ];
 
-// export const headerItems = ["Time", "Amount", "Payment Type", "Terminal", "Account", "Status"]
 
 export const headerItems = [
   {
