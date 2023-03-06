@@ -1,5 +1,5 @@
 # PosMon Dashboard
-An implementation of PosMon Dashboard landing page using html, css, React and Tailwindcss
+An implementation of PosMon Dashboard page using html, css, React and Tailwindcss
 
 ## Prequisite
 - Your browser version should be up to date for better experience
