@@ -1,18 +1,14 @@
 import React from "react";
 import BarChart from "../../Components/BarChart";
-
 import FailedTransaction from "../../Components/FailedTransaction";
 import DashboardLayout from "../../Components/Layout/DashboardLayout";
 import Table from "../../Components/Table";
 import TransactionCardType from "../../Components/TransactionCardType";
 import TransactionStatistic from "../../Components/TransactionStatistic";
 import { headerItems, tableItems } from "../../data";
-import { items, statistics } from "../../data";
-
 import "./Home.css";
 
 const Home = () => {
-  const activePath = window.location.pathname;
   return (
     <DashboardLayout>
       <main className="wrapper">

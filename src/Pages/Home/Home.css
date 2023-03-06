@@ -1,8 +1,7 @@
 .wrapper{
     @apply pt-[2.5rem] pl-4 pr-12 pb-[15.18rem];
-
 }
-header {
+.wrapper header{
     @apply text-Ablack flex justify-between items-start;
 }
 .welcome-back{

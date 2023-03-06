@@ -122,7 +122,6 @@ export const navItems = [
   },
 ];
 
-
 export const headerItems = [
   {
     label: "Time",
