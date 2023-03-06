@@ -15,6 +15,7 @@ const DonutChart = () => {
       dataLabels: {
         enabled: false,
       },
+      labels:["Acquirer related","Cardholder Related", "Issuer Related","Switch Related", "Undefined"],
       legend: {
         show: false,
       },

@@ -16,16 +16,16 @@ const Home = () => {
   return (
     <DashboardLayout>
       <main className="wrapper">
-        <header>
-          <div className="flex justify-end items-center gap-4">
-            <p>12th October, 2022</p>
-            <img className="cursor-pointer" src="/vectors/Group v.png" alt="" />
-          </div>
+        <header  >
           <div className="mb-[2.5rem]">
             <h3 className="text-[2.28rem]  font-bold mb-[0.25rem]">
               Welcome back,
             </h3>
             <p>Here’s what is happening with your Terminals today,</p>
+          </div>
+          <div className="flex items-center gap-4">
+            <p>12th October, 2022</p>
+            <img className="cursor-pointer" src="/vectors/Group v.png" alt="" />
           </div>
         </header>
         <TransactionStatistic />

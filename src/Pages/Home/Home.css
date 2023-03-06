@@ -3,5 +3,5 @@
 
 }
 header {
-    @apply text-Ablack;
+    @apply text-Ablack flex justify-between items-start;
 }

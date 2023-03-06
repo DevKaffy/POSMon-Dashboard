@@ -7,7 +7,7 @@ const TransactionCardType = () => {
           <h3 className="text-Ablack font-bold text-[1.5rem] mb-[1.5rem]">
             Transactions Per Card Type
           </h3>
-          <div className="flex flex-wrap gap-[1.75rem]">
+          <div className="flex flex-wrap gap-[1.6rem]">
             {cardItems.map((cardItem, index) => (
               <Card
                 key={`cardItems -${index}`}

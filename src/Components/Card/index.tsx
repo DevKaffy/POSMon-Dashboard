@@ -16,7 +16,7 @@ const Card = ({
   failedvalue: string;
 }) => {
   return (
-    <div className=" bg-white w-[22.12rem] h-[16.5rem] py-[1.75rem] px-[1.37rem] rounded-[5px] text-[Ablack]">
+    <div className=" bg-white w-[21.12rem] h-[16.5rem] py-[1.75rem] px-[1.37rem] rounded-[5px] text-[Ablack]">
 
       <p className="mb-[1.25rem] text-[1.12rem] font-semibold">{cardtype}</p>
       <img className="w-[18.56rem] h-[6.06rem] mb-[1.3rem]" src={img} alt="" />
