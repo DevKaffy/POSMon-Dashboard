@@ -1,20 +1,24 @@
 import React from "react";
 import ReactApexChart from "react-apexcharts";
+import "./BarChart.css";
 
 const BarChart = () => {
   const state: any = {
     series: [
       {
-        name: "Approved",data: [
-          2000, 2700, 1400, 0, 3400, 2400, 1800, 2300, 2500, 0, 1300, 3000, 3200, 2200, 3400, 1500, 700, 300,
-          0, 0, 0, 0, 0, 0, 
+        name: "Approved",
+        data: [
+          2000, 2700, 1400, 0, 3400, 2400, 1800, 2300, 2500, 0, 1300, 3000,
+          3200, 2200, 3400, 1500, 700, 300, 0, 0, 0, 0, 0, 0,
         ],
-      },     
+      },
       {
         name: "Failed",
-         data: [
-          500, 300, 200, 0, 1500, 1000, 500, 1300, 700, 0, 800, 1300, 500, 1000, 1500, 300, 200, 100, 0, 0, 0, 0, 0, 0,
-        ],}
+        data: [
+          500, 300, 200, 0, 1500, 1000, 500, 1300, 700, 0, 800, 1300, 500, 1000,
+          1500, 300, 200, 100, 0, 0, 0, 0, 0, 0,
+        ],
+      },
     ],
     options: {
       colors: ["#3DD154", "#E34A4A"],
@@ -64,16 +68,15 @@ const BarChart = () => {
           "11pm",
         ],
       },
-    
+
       fill: {
         opacity: 1,
       },
-      
     },
   };
   return (
-    <div className="bg-white px-[1.87rem] pb-[1.68rem]">
-      <div className="flex flex-col items-end p-[1.87rem] gap-y-[0.5rem]">
+    <div className="barchart-wrapper">
+      <div className="barchart-paragraphs">
         <p className="text-[#1D242D] font-semibold">
           Overall Approval Rate: 45.0%
         </p>
@@ -86,14 +89,11 @@ const BarChart = () => {
         type="bar"
         height={350}
       />
-      <div className="flex items-center justify-end text-[white] text-[14px]">
-        <button className="bg-[#4C6FFF] py-[0.84rem] px-[1rem] rounded-[5px]">
-          View Table
-        </button>
+      <div className="button-wrapper">
+        <button>View Table</button>
       </div>
     </div>
   );
 };
 
 export default BarChart;
-

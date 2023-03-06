@@ -1,0 +1,12 @@
+.barchart-wrapper{
+    @apply bg-white px-[1.87rem] pb-[1.68rem];
+}
+.barchart-paragraphs{
+    @apply flex flex-col items-end p-[1.87rem] gap-y-[0.5rem];
+}
+.button-wrapper{
+    @apply flex items-center justify-end text-[white] text-[14px];
+}
+.button-wrapper button{
+    @apply bg-[#4C6FFF] py-[0.84rem] px-[1rem] rounded-[5px];
+}

@@ -16,23 +16,23 @@ const Home = () => {
   return (
     <DashboardLayout>
       <main className="wrapper">
-        <header  >
+        <header>
           <div className="mb-[2.5rem]">
-            <h3 className="text-[2.28rem]  font-bold mb-[0.25rem]">
+            <h3 className="welcome-back">
               Welcome back,
             </h3>
             <p>Here’s what is happening with your Terminals today,</p>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="date">
             <p>12th October, 2022</p>
             <img className="cursor-pointer" src="/vectors/Group v.png" alt="" />
           </div>
         </header>
         <TransactionStatistic />
-        <section>
-          <div className="flex items-center justify-between mb-[1.5rem] text-[1.5rem]">
-            <h3 className="text-Ablack font-bold">Live Monitoring</h3>
-            <div className="flex items-center gap-[1.37rem]">
+        <section className="section-two-wrapper">
+          <div className="section-two">
+            <h3 className="live-monitoring">Live Monitoring</h3>
+            <div className="live-image">
               <img
                 className="w-[1.25rem] h-[1.25rem]"
                 src="/vectors/Vector.svg"
@@ -45,7 +45,7 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="bg-white rounded-[10px]">
+          <div className="table-wrapper">
             <Table
               tableData={tableItems.map((item) => ({
                 time: item.time,
@@ -72,8 +72,8 @@ const Home = () => {
             />
           </div>
         </section>
-        <section>
-          <p className="mb-[1rem] font-bold text-[1.5rem] text-[Ablack] mt-12">
+        <section className="section-three">
+          <p className="section-threep">
             Hourly Distribution
           </p>
           <div className="bg-white">
